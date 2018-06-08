@@ -1,33 +1,15 @@
 <?php
 namespace app\controllers;
 
-use yii\filters\auth\CompositeAuth;
+use app\components\Authenticatable;
 use yii\rest\ActiveController;
-use yii\filters\auth\HttpBasicAuth;
-use yii\filters\auth\HttpBearerAuth;
-use yii\filters\auth\QueryParamAuth;
-use app\models\Item;
-use app\components\ItemsRepository;
-use app\components\ItemsRepositoryFactory;
 
 class ItemController extends ActiveController
 {
 
-    public $modelClass = 'app\models\Item';
+    use Authenticatable;
 
-    // public function behaviors()
-    // {
-    // $behaviors = parent::behaviors();
-    // $behaviors['authenticator'] = [
-    // 'class' => CompositeAuth::className(),
-    // 'authMethods' => [
-    // HttpBasicAuth::className(),
-    // HttpBearerAuth::className(),
-    // QueryParamAuth::className()
-    // ]
-    // ];
-    // return $behaviors;
-    // }
+    public $modelClass = 'app\models\Item';
 
     public function actionCategory()
     {
