@@ -26,9 +26,6 @@ $config = [
             'identityClass' => 'app\models\User',
             'enableAutoLogin' => false,
         ],
-        'errorHandler' => [
-            'errorAction' => 'site/error',
-        ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
             'targets' => [
@@ -61,20 +58,12 @@ $config = [
                 ]]
             ],
         ],
-
+        'errorHandler' => [
+            'errorAction' => 'error/index',
+        ],
         'response' => [
             'class' => '\app\components\ApiResponse',
-            'on beforeSend' => function ($event) {
-                $response = $event->sender;
 
-                if ($event->sender->statusCode == "404" && !is_array($response->data)) {
-                    $response->data = json_encode([
-                        'success' => $response->isSuccessful,
-                        'data' => "Error Not Found",
-                    ]);
-                    $response->statusCode = 200;
-                }
-            },
          ],
     ],
     'params' => $params,

@@ -1,7 +1,6 @@
 <?php
 namespace app\controllers;
 
-
 use yii\filters\auth\CompositeAuth;
 use yii\rest\ActiveController;
 use yii\filters\auth\HttpBasicAuth;
