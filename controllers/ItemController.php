@@ -7,7 +7,7 @@ use yii\rest\ActiveController;
 class ItemController extends ActiveController
 {
 
-    use Authenticatable;
+//     use Authenticatable;
 
     public $modelClass = 'app\models\Item';
 
