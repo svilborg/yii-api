@@ -11,3 +11,6 @@ modules:
     enabled:
       - Filesystem
       - Yii2
+      - REST:
+          depends: PhpBrowser  
+          url: 'http://api.test'
