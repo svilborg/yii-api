@@ -2,12 +2,27 @@
 namespace app\controllers;
 
 use yii\web\Controller;
+use yii\web\Response;
+use yii\filters\ContentNegotiator;
 
 /**
  * Error controller
  */
 class ErrorController extends Controller
 {
+
+    public function behaviors()
+    {
+        return [
+            'contentNegotiator' => [
+                'class' => ContentNegotiator::className(),
+                'formats' => [
+                    'application/json' => Response::FORMAT_JSON,
+                    'application/xml' => Response::FORMAT_XML
+                ]
+            ]
+        ];
+    }
 
     /**
      * Displays homepage.
@@ -16,15 +31,8 @@ class ErrorController extends Controller
      */
     public function actionIndex()
     {
-        \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
-
         return [
-            'status' => [
-                'http_code' => 404
-            ],
-            'data' => [
-                'message' => "Page Not Found"
-            ]
+            'message' => "Page Not Found"
         ];
     }
 }
