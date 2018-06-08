@@ -4,8 +4,7 @@
  * @var $index integer
  */
 return [
-    'name' => $faker->colorName,
-    'description' => $faker->text(120),
+    'name' => $faker->country,
     'created_at' => 1528470210,
     'updated_at' => 1528470210
 ];
