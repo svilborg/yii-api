@@ -1,75 +1,75 @@
 <?php
 
 return [
-    'item0' => [
-        'name' => 'GreenYellow',
-        'description' => 'Et fuga facilis et.',
+    'items0' => [
+        'name' => 'Wheat',
+        'description' => 'Id est unde qui non ratione.',
         'created_at' => 1528470210,
         'updated_at' => 1528470210,
     ],
-    'item1' => [
-        'name' => 'Black',
-        'description' => 'Sapiente id ut omnis.',
-        'created_at' => 1528470210,
-        'updated_at' => 1528470210,
-    ],
-    'item2' => [
-        'name' => 'DarkRed',
-        'description' => 'Architecto est at illo.',
-        'created_at' => 1528470210,
-        'updated_at' => 1528470210,
-    ],
-    'item3' => [
-        'name' => 'Chocolate',
-        'description' => 'Tempore quia deserunt earum.',
-        'created_at' => 1528470210,
-        'updated_at' => 1528470210,
-    ],
-    'item4' => [
+    'items1' => [
         'name' => 'LawnGreen',
-        'description' => 'Fugit quo aut ex quasi id.',
+        'description' => 'Sit aut beatae qui ea.',
         'created_at' => 1528470210,
         'updated_at' => 1528470210,
     ],
-    'item5' => [
-        'name' => 'SeaShell',
-        'description' => 'Qui dolor accusamus et.',
+    'items2' => [
+        'name' => 'LimeGreen',
+        'description' => 'Eos ut voluptate ex fuga.',
         'created_at' => 1528470210,
         'updated_at' => 1528470210,
     ],
-    'item6' => [
-        'name' => 'DimGray',
-        'description' => 'Id ut ex est.',
+    'items3' => [
+        'name' => 'Linen',
+        'description' => 'Ad dolor at sit est.',
         'created_at' => 1528470210,
         'updated_at' => 1528470210,
     ],
-    'item7' => [
-        'name' => 'FloralWhite',
-        'description' => 'Quaerat ipsam autem ut omnis.',
+    'items4' => [
+        'name' => 'DarkSeaGreen',
+        'description' => 'Amet ut et esse dolore.',
         'created_at' => 1528470210,
         'updated_at' => 1528470210,
     ],
-    'item8' => [
-        'name' => 'CornflowerBlue',
-        'description' => 'Dolore ut aut et ad modi a.',
+    'items5' => [
+        'name' => 'Brown',
+        'description' => 'At ad nostrum et aut quia ut.',
         'created_at' => 1528470210,
         'updated_at' => 1528470210,
     ],
-    'item9' => [
-        'name' => 'FloralWhite',
-        'description' => 'Culpa adipisci quia ullam et.',
+    'items6' => [
+        'name' => 'DarkSalmon',
+        'description' => 'Ut sit porro neque sequi.',
         'created_at' => 1528470210,
         'updated_at' => 1528470210,
     ],
-    'item10' => [
-        'name' => 'Lime',
-        'description' => 'Soluta pariatur amet et vitae.',
+    'items7' => [
+        'name' => 'Aquamarine',
+        'description' => 'Molestiae cum enim et eum.',
         'created_at' => 1528470210,
         'updated_at' => 1528470210,
     ],
-    'item11' => [
-        'name' => 'CadetBlue',
-        'description' => 'Magni id fuga aut est quia.',
+    'items8' => [
+        'name' => 'DeepPink',
+        'description' => 'Animi et ad maiores.',
+        'created_at' => 1528470210,
+        'updated_at' => 1528470210,
+    ],
+    'items9' => [
+        'name' => 'Plum',
+        'description' => 'Nihil porro ipsum cum enim.',
+        'created_at' => 1528470210,
+        'updated_at' => 1528470210,
+    ],
+    'items10' => [
+        'name' => 'Ivory',
+        'description' => 'A quia saepe nihil quia minus.',
+        'created_at' => 1528470210,
+        'updated_at' => 1528470210,
+    ],
+    'items11' => [
+        'name' => 'Red',
+        'description' => 'Est rerum sunt aperiam amet.',
         'created_at' => 1528470210,
         'updated_at' => 1528470210,
     ],
