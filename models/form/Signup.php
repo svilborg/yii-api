@@ -52,6 +52,7 @@ class Signup extends Model
         $user->email = $this->email;
         $user->setPassword($this->password);
         $user->generateAuthKey();
+        $user->access_token = \Yii::$app->security->generateRandomString();
 
         $user = $user->save() ? $user : null;
 
