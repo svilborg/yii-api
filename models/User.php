@@ -228,4 +228,20 @@ class User extends ActiveRecord implements IdentityInterface
         $this->password_reset_token = null;
     }
 
+    /**
+     * Generates new access token
+     */
+    public function generateAccessToken()
+    {
+        $this->access_token = \Yii::$app->security->generateRandomString();
+    }
+
+    /**
+     * Removes access token
+     */
+    public function removeAccessToken()
+    {
+        $this->access_token = null;
+    }
+
 }
