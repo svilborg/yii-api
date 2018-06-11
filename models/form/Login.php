@@ -75,6 +75,7 @@ class Login extends Model
     {
         if ($this->validate()) {
             $user = $this->getUser();
+            $user->access_token = \Yii::$app->security->generateRandomString();
             if ($user->validatePassword($this->password)) {
 
                 unset($user->password_hash);
