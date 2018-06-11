@@ -15,8 +15,8 @@ class ItemController extends ActiveController
     {
         $id = \Yii::$app->request->get("id");
 
-        /** @var \api\components\ItemsRepositoryFactory $factory */
-        $factory = \Yii::$container->get('api\components\ItemsRepositoryFactory');
+        /** @var \app\components\ItemsRepositoryFactory $factory */
+        $factory = \Yii::$container->get('app\components\ItemsRepositoryFactory');
         $repo = $factory->getRepository();
 
         return $repo->getItemCategories($id);
@@ -24,7 +24,7 @@ class ItemController extends ActiveController
 
     public function actionData()
     {
-        $factory = \Yii::$container->get('api\components\ItemsRepositoryFactory');
+        $factory = \Yii::$container->get('app\components\ItemsRepositoryFactory');
         $repo = $factory->getRepository();
 
         return $repo->getAll();

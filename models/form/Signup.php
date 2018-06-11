@@ -1,5 +1,5 @@
 <?php
-namespace app\models;
+namespace app\models\form;
 
 use yii\base\Model;
 use app\models\User;
@@ -7,7 +7,7 @@ use app\models\User;
 /**
  * Signup form
  */
-class SignupForm extends Model
+class Signup extends Model
 {
     public $username;
     public $email;
@@ -56,6 +56,7 @@ class SignupForm extends Model
         $user = $user->save() ? $user : null;
 
         unset($user->password_hash);
+        unset($user->password_reset_token);
 
         return $user;
     }

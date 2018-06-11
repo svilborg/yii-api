@@ -1,9 +1,9 @@
 <?php
 namespace app\controllers;
 
+use app\models\form\Login;
+use app\models\form\Signup;
 use yii\rest\ActiveController;
-use app\models\User;
-use app\models\SignupForm;
 
 class UserController extends ActiveController
 {
@@ -20,39 +20,33 @@ class UserController extends ActiveController
 
     public function actionLogin()
     {
-        $username = \Yii::$app->request->post("username");
-        $password = \Yii::$app->request->post("password");
-
-        $user = User::findByUsername($username);
-
-        if ($user) {
-
-            if ($user->validatePassword($password)) {
-                $user->access_token = \Yii::$app->security->generateRandomString();
-                $user->save();
-            } else {
-                throw new \Exception("Unauthorized.");
+        $model = new Login();
+        if ($model->load(\Yii::$app->request->post(), '')) {
+            if ($user = $model->login()) {
+                return $user;
             }
-        } else {
-            throw new \Exception("Unauthorized");
+
+            return [
+                "errors" => $model->getErrors()
+            ];
         }
 
-        return $user;
+        throw new \Exception("Unauthorized.");
     }
 
     public function actionRegister()
     {
-        $model = new SignupForm();
+        $model = new Signup();
         if ($model->load(\Yii::$app->request->post(), '')) {
             if ($user = $model->signup()) {
                 return $user;
             }
 
-            return $model->getErrors();
-        } else {
-            throw new \Exception("Error");
+            return [
+                "errors" => $model->getErrors()
+            ];
         }
 
-        return [];
+        throw new \Exception("Unauthorized.");
     }
 }
